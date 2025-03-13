@@ -1,1 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>For My Love</title>
+    <style>
+        /* Set a warm gradient background */
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background: linear-gradient(135deg, #f6d365, #fda085);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        /* The beating heart */
+        .heart {
+            font-size: 100px;
+            color: #e63946;
+            animation: beat 1s infinite;
+            cursor: pointer;
+        }
+        
+        @keyframes beat {
+            0% { transform: scale(1); }
+            25% { transform: scale(1.2); }
+            50% { transform: scale(1); }
+            75% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+        
+        /* The lovely message */
+        .message {
+            margin-top: 20px;
+            font-size: 32px;
+            color: #264653;
+            text-align: center;
+            max-width: 90%;
+        }
 
+        /* The walking cat */
+        .cat {
+                font-size: 50px;
+                position: absolute;
+                bottom: 10px;
+                left: 0;
+                animation: walk 10s linear infinite, tail-wag 1s infinite;
+        }
+
+        @keyframes walk {
+                0% { left: 0; transform: translateY(0); }
+                25% { left: 25%; transform: translateY(-10px); }
+                50% { left: 50%; transform: translateY(0); }
+                75% { left: 75%; transform: translateY(-10px); }
+                100% { left: 100%; transform: translateY(0); }
+        }
+
+        @keyframes tail-wag {
+                0%, 100% { transform: rotate(0deg); }
+                25% { transform: rotate(10deg); }
+                75% { transform: rotate(-10deg); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="heart" title="Click to reveal a secret message!">💖</div>
+    <div class="message"></div>
+        <span style="font-family: 'Love Ya Like A Sister', cursive; font-size: 60px;">B miss oun klang nas oun Meow</span>
+        <br>
+        <span style="font-family: 'Love Ya Like A Sister', cursive; font-size: 40px;">'Click on heart to reveal secret message'</span>
+    </div>
+
+    <script>
+        // When the heart is clicked, show an extra special message.
+        document.querySelector('.heart').addEventListener('click', function() {
+            alert("You're my little babe, my little cat, and the love of my life. Thank you for being you!");
+        });
+    </script>
+
+    <div class="cat">🐱</div>
+
+</body>
+</html>
